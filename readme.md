@@ -1,4 +1,4 @@
-:pencil: Filter of names 
+#Filter of names:pencil: 
 
 - There are some names on the table to filter. 
 - Techs: JavaScript, Jquery, HTML5 and Bootstrap
