@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Filter employees</title>
+ <link href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" />
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ <script defer async type='text/javascript'>
+   $(document).ready(function(){
+   $("#inputName").on("keyup", function() {
+   var value = $(this).val().toLowerCase();
+    $("#tableEmplo tbody tr").filter(function() {
+       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+     });
+   });
+ });
+
+ </script> 
+</head>
+<body>
+  <div class="container-md bg-light border shadow-lg rounded p-5">
+    <p class='display-1 '>Filter employees</p> 
+    <input type="text" id='inputName' class='form-control border shadow-lg  rounded-top  pl-3' placeholder="Homer">
+    <table id='tableEmplo' class='table table-striped table-bordered table-hover rounded mt-4'>
+     <thead>
+      <tr class='bg-dark text-light font-weight-bold text-uppercase  '>
+        <td>Name</td>
+        <td>Last Name</td>
+        <td>Age</td>
+        <td>E-mail</td>
+      </tr> 
+     </thead>
+      <tbody>
+      <tr class='text-center shadow-sm'>
+       <td>Alisson</td>
+       <td>Fergenton</td>
+       <td>18</td>
+       <td>@loremloremlorem</td>
+      </tr> 
+      <tr class='text-center  shadow-sm'>
+       <td>Rick</td>
+       <td>Dayday</td>
+       <td>20</td>
+       <td>@rickhere.com</td>
+      </tr> 
+      <tr class='text-center  shadow-sm'>
+       <td>Jessica</td>
+       <td>Olsen</td>
+       <td>20</td>
+       <td>@jessicaolsen.com</td>
+      </tr> 
+      <tr class='text-center  shadow-sm'>
+       <td>Elias</td>
+       <td>Toby</td>
+       <td>23</td>
+       <td>@tobyhiel.com</td>
+      </tr> 
+      <tr class='text-center  shadow-sm'>
+       <td>Ana</td>
+       <td>Marston</td>
+       <td>26</td>
+       <td>...</td>
+      </tr> 
+      <tr class='text-center  shadow-sm'>
+       <td>Marge</td>
+       <td>Anne</td>
+       <td>26</td>
+       <td>@marge2300home.com</td>
+      </tr> 
+      <tr class='text-center  shadow-sm'>
+       <td>Jimmy</td>
+       <td>Silvester</td>
+       <td>28</td>
+       <td>@silvesterJim.com</td>
+      </tr> 
+      <tr class='text-center  shadow-sm'>
+       <td>Jimmy</td>
+       <td>Holiday</td>
+       <td>30</td>
+       <td>@jimmyHoliday.com</td>
+      </tr> 
+      <tr class='text-center  shadow-sm'>
+       <td>Nelson</td>
+       <td>Fergudson</td>
+       <td>32</td>
+       <td>@nelson120000.com</td>
+      </tr> 
+      <tr class='text-center  shadow-sm'>
+       <td>Kevin</td>
+       <td>L. Alka</td>
+       <td>36</td>
+       <td>@alkaLk.com</td>
+      </tr> 
+      <tr class='text-center  shadow-sm'>
+       <td>Sarah</td>
+       <td>Silva</td>
+       <td>37</td>
+       <td>@saraa.com</td>
+      </tr> 
+      <tr class='text-center  shadow-sm'>
+       <td>John</td>
+       <td>Jimer</td>
+       <td>44</td>
+       <td>@jognjimer.com</td>
+      </tr>  
+      <tr class='text-center  shadow-sm'>
+       <td>Antonio</td>
+       <td>A. Soniedro</td>
+       <td>49</td>
+       <td>@soniedro23333.com</td>
+      </tr>  
+      <tr class='text-center  shadow-sm'>
+       <td>Angela</td>
+       <td>Beesly</td>
+       <td>50</td>
+       <td>@beeslyAn.com</td>
+      </tr>  
+      <tr class='text-center  shadow-sm'>
+       <td>Selva</td>
+       <td>Edgar</td>
+       <td>52</td>
+       <td>@edgarSelva</td>
+      </tr>  
+      <tr class='text-center  shadow-sm'>
+       <td>John</td>
+       <td>Doe</td>
+       <td>58</td>
+       <td>...</td>
+      </tr>   
+      </tbody>
+    </table>
+  </div>
+   
+</body>
+</html>
